@@ -1,0 +1,130 @@
+{
+    "filePath": "[SNAPSHOT]/ng.install-shellscript/input.sh",
+    "messages": [
+        {
+            "message": "found unverified binary: kustomize",
+            "range": [
+                465,
+                494
+            ],
+            "type": "message",
+            "ruleId": "@pkgdeps/secretlint-rule-checksum",
+            "loc": {
+                "start": {
+                    "line": 15,
+                    "column": 0
+                },
+                "end": {
+                    "line": 15,
+                    "column": 29
+                }
+            },
+            "severity": "error",
+            "messageId": "FOUND_UNVERIFIED_BINARY",
+            "docsUrl": "https://github.com/pkgdeps/checksum/blob/master/packages/secretlint-rule-checksum/README.md#FOUND_UNVERIFIED_BINARY",
+            "data": {
+                "binary": "kustomize"
+            }
+        },
+        {
+            "message": "found unverified binary: kubectl",
+            "range": [
+                545,
+                572
+            ],
+            "type": "message",
+            "ruleId": "@pkgdeps/secretlint-rule-checksum",
+            "loc": {
+                "start": {
+                    "line": 19,
+                    "column": 0
+                },
+                "end": {
+                    "line": 19,
+                    "column": 27
+                }
+            },
+            "severity": "error",
+            "messageId": "FOUND_UNVERIFIED_BINARY",
+            "docsUrl": "https://github.com/pkgdeps/checksum/blob/master/packages/secretlint-rule-checksum/README.md#FOUND_UNVERIFIED_BINARY",
+            "data": {
+                "binary": "kubectl"
+            }
+        },
+        {
+            "message": "found unverified binary: conftest",
+            "range": [
+                943,
+                971
+            ],
+            "type": "message",
+            "ruleId": "@pkgdeps/secretlint-rule-checksum",
+            "loc": {
+                "start": {
+                    "line": 25,
+                    "column": 0
+                },
+                "end": {
+                    "line": 25,
+                    "column": 28
+                }
+            },
+            "severity": "error",
+            "messageId": "FOUND_UNVERIFIED_BINARY",
+            "docsUrl": "https://github.com/pkgdeps/checksum/blob/master/packages/secretlint-rule-checksum/README.md#FOUND_UNVERIFIED_BINARY",
+            "data": {
+                "binary": "conftest"
+            }
+        },
+        {
+            "message": "found unverified binary: kubectl",
+            "range": [
+                1201,
+                1233
+            ],
+            "type": "message",
+            "ruleId": "@pkgdeps/secretlint-rule-checksum",
+            "loc": {
+                "start": {
+                    "line": 28,
+                    "column": 198
+                },
+                "end": {
+                    "line": 28,
+                    "column": 230
+                }
+            },
+            "severity": "error",
+            "messageId": "FOUND_UNVERIFIED_BINARY",
+            "docsUrl": "https://github.com/pkgdeps/checksum/blob/master/packages/secretlint-rule-checksum/README.md#FOUND_UNVERIFIED_BINARY",
+            "data": {
+                "binary": "kubectl"
+            }
+        },
+        {
+            "message": "found unverified binary: jq",
+            "range": [
+                1271,
+                1298
+            ],
+            "type": "message",
+            "ruleId": "@pkgdeps/secretlint-rule-checksum",
+            "loc": {
+                "start": {
+                    "line": 31,
+                    "column": 0
+                },
+                "end": {
+                    "line": 31,
+                    "column": 27
+                }
+            },
+            "severity": "error",
+            "messageId": "FOUND_UNVERIFIED_BINARY",
+            "docsUrl": "https://github.com/pkgdeps/checksum/blob/master/packages/secretlint-rule-checksum/README.md#FOUND_UNVERIFIED_BINARY",
+            "data": {
+                "binary": "jq"
+            }
+        }
+    ]
+}
