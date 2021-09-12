@@ -1,5 +1,6 @@
 import meow from "meow";
 import { verify } from "./index";
+import url from "url";
 
 export const cli = meow(
     `
@@ -29,7 +30,10 @@ export const run = async (input = cli.input, _flags = cli.flags) => {
     console.error(checkResults.join("\n"));
 };
 
-run().catch((error) => {
-    process.exitCode = 1;
-    console.error(error);
-});
+const self = url.fileURLToPath(import.meta.url);
+if (process.argv[1] === self) {
+    run().catch((error) => {
+        process.exitCode = 1;
+        console.error(error);
+    });
+}
