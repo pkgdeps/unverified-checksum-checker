@@ -2,7 +2,7 @@
 
 Found unverified executable binary on your shellscript.
 
-This tools help you to implement checksum check logics. 
+This tool help you to implement checksum check logics. 
 
 ## Features
 
