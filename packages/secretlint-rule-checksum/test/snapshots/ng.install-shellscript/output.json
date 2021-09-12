@@ -21,7 +21,7 @@
             },
             "severity": "error",
             "messageId": "FOUND_UNVERIFIED_BINARY",
-            "docsUrl": "https://github.com/pkgdeps/checksum/blob/master/packages/secretlint-rule-checksum/README.md#FOUND_UNVERIFIED_BINARY",
+            "docsUrl": "https://github.com/pkgdeps/unverified-checksum-checker/blob/master/packages/secretlint-rule-checksum/README.md#FOUND_UNVERIFIED_BINARY",
             "data": {
                 "binary": "kustomize"
             }
@@ -46,7 +46,7 @@
             },
             "severity": "error",
             "messageId": "FOUND_UNVERIFIED_BINARY",
-            "docsUrl": "https://github.com/pkgdeps/checksum/blob/master/packages/secretlint-rule-checksum/README.md#FOUND_UNVERIFIED_BINARY",
+            "docsUrl": "https://github.com/pkgdeps/unverified-checksum-checker/blob/master/packages/secretlint-rule-checksum/README.md#FOUND_UNVERIFIED_BINARY",
             "data": {
                 "binary": "kubectl"
             }
@@ -71,7 +71,7 @@
             },
             "severity": "error",
             "messageId": "FOUND_UNVERIFIED_BINARY",
-            "docsUrl": "https://github.com/pkgdeps/checksum/blob/master/packages/secretlint-rule-checksum/README.md#FOUND_UNVERIFIED_BINARY",
+            "docsUrl": "https://github.com/pkgdeps/unverified-checksum-checker/blob/master/packages/secretlint-rule-checksum/README.md#FOUND_UNVERIFIED_BINARY",
             "data": {
                 "binary": "conftest"
             }
@@ -96,7 +96,7 @@
             },
             "severity": "error",
             "messageId": "FOUND_UNVERIFIED_BINARY",
-            "docsUrl": "https://github.com/pkgdeps/checksum/blob/master/packages/secretlint-rule-checksum/README.md#FOUND_UNVERIFIED_BINARY",
+            "docsUrl": "https://github.com/pkgdeps/unverified-checksum-checker/blob/master/packages/secretlint-rule-checksum/README.md#FOUND_UNVERIFIED_BINARY",
             "data": {
                 "binary": "kubectl"
             }
@@ -121,7 +121,7 @@
             },
             "severity": "error",
             "messageId": "FOUND_UNVERIFIED_BINARY",
-            "docsUrl": "https://github.com/pkgdeps/checksum/blob/master/packages/secretlint-rule-checksum/README.md#FOUND_UNVERIFIED_BINARY",
+            "docsUrl": "https://github.com/pkgdeps/unverified-checksum-checker/blob/master/packages/secretlint-rule-checksum/README.md#FOUND_UNVERIFIED_BINARY",
             "data": {
                 "binary": "jq"
             }

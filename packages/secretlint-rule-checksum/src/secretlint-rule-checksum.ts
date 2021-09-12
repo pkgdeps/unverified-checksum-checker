@@ -25,7 +25,7 @@ export const creator: SecretLintRuleCreator<Options> = {
         type: "scanner",
         supportedContentTypes: ["text"],
         docs: {
-            url: "https://github.com/pkgdeps/checksum/blob/master/packages/secretlint-rule-checksum/README.md"
+            url: "https://github.com/pkgdeps/unverified-checksum-checker/blob/master/packages/secretlint-rule-checksum/README.md"
         }
     },
     create(context, options) {
