@@ -35,22 +35,26 @@ export const creator: SecretLintRuleCreator<Options> = {
                 if (!isShellScript(source.content)) {
                     return;
                 }
-                const commands = collectExecutableCommands(source.content);
-                commands.forEach((command) => {
-                    if (command.checked) {
-                        return;
-                    }
-                    if (options.allowBinaryNames?.includes(command.binary)) {
-                        return;
-                    }
-                    context.report({
-                        message: t("FOUND_UNVERIFIED_BINARY", {
-                            binary: command.binary
-                        }),
-                        // @ts-expect-error: range wider
-                        range: command.range
+                try {
+                    const commands = collectExecutableCommands(source.content);
+                    commands.forEach((command) => {
+                        if (command.checked) {
+                            return;
+                        }
+                        if (options.allowBinaryNames?.includes(command.binary)) {
+                            return;
+                        }
+                        context.report({
+                            message: t("FOUND_UNVERIFIED_BINARY", {
+                                binary: command.binary
+                            }),
+                            // @ts-expect-error: range wider
+                            range: command.range
+                        });
                     });
-                });
+                } catch (error) {
+                    console.error(error);
+                }
             }
         };
     }
