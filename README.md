@@ -1,4 +1,4 @@
-n # @secretlint/secretlint-rule-shellscript-checksum
+n # @pkgdeps/unverified-checksum-checker
 
 secretlint rule checks if checking checksum in shellscript.
 
@@ -6,7 +6,7 @@ secretlint rule checks if checking checksum in shellscript.
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install @secretlint/secretlint-rule-shellscript-checksum
+    npm install @pkgdeps/unverified-checksum-checker
 
 ## Usage
 
@@ -14,7 +14,7 @@ Install with [npm](https://www.npmjs.com/):
 
 ## Changelog
 
-See [Releases page](https://github.com/secretlint/secretlint-rule-shellscript-checksum/releases).
+See [Releases page](https://github.com/pkgdeps/unverified-checksum-checker/releases).
 
 ## Running tests
 
@@ -26,7 +26,7 @@ Install devDependencies and Run `npm test`:
 
 Pull requests and stars are always welcome.
 
-For bugs and feature requests, [please create an issue](https://github.com/secretlint/secretlint-rule-shellscript-checksum/issues).
+For bugs and feature requests, [please create an issue](https://github.com/pkgdeps/unverified-checksum-checker/issues).
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`

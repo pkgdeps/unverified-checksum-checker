@@ -98,7 +98,7 @@ export type ExecutableCommand = {
         targetToken: ShellWordToken;
     };
 };
-export const collectExecutableCommands = (content: string, _options: {}): ExecutableCommand[] => {
+export const collectExecutableCommands = (content: string): ExecutableCommand[] => {
     const source = new StructuredSource(content);
     const memorizedTokenize = memorize(tokenize);
     // collect chmod as executable commands

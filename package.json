@@ -1,19 +1,19 @@
 {
   "private": true,
-  "name": "@secretlint/secretlint-rule-shellscript-checksum",
+  "name": "@pkgdeps/unverified-checksum-checker",
   "version": "1.0.0",
   "description": "secretlint rule checks if checking checksum in shellscript.",
   "keywords": [
     "secretlint",
     "secreltint-rule"
   ],
-  "homepage": "https://github.com/secretlint/secretlint-rule-shellscript-checksum",
+  "homepage": "https://github.com/pkgdeps/unverified-checksum-checker",
   "bugs": {
-    "url": "https://github.com/secretlint/secretlint-rule-shellscript-checksum/issues"
+    "url": "https://github.com/pkgdeps/unverified-checksum-checker/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/secretlint/secretlint-rule-shellscript-checksum.git"
+    "url": "https://github.com/pkgdeps/unverified-checksum-checker.git"
   },
   "workspaces": {
     "packages": [
