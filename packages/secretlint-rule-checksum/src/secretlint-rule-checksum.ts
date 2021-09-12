@@ -14,7 +14,6 @@ export const messages = {
 const hasVerifiedComment = (text: string, binaryName: string) => {
     // # {binaryName} is verified
     const match = text.match(/#(.*?)verified/);
-    console.log(match);
     if (match) {
         return match[1].includes(binaryName);
     }
@@ -65,7 +64,6 @@ export const creator: SecretLintRuleCreator<Options> = {
                             }
                         });
                         const commentText = source.content.slice(ignoreCommentRange[0], ignoreCommentRange[1] + 1);
-                        console.log(commentText, command.binary);
                         if (hasVerifiedComment(commentText, command.binary)) {
                             return;
                         }

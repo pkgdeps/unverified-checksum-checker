@@ -1,8 +1,11 @@
 import * as fs from "fs";
 import * as path from "path";
 import * as assert from "assert";
-import { collectExecutableCommands } from "../src/checksum-collector";
+import { collectExecutableCommands } from "../src/checksum-collector.js";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const fixturesDir = path.join(__dirname, "snapshots");
 describe("Snapshot testing", () => {
     fs.readdirSync(fixturesDir).map((caseName) => {

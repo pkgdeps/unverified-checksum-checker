@@ -18,26 +18,23 @@
   "license": "MIT",
   "author": "azu",
   "sideEffects": false,
-  "main": "lib/checksum-collector.js",
-  "module": "module/checksum-collector.js",
-  "types": "lib/checksum-collector.d.ts",
-  "directories": {
-    "lib": "lib",
-    "test": "test"
-  },
+  "main": "./mjs/checksum-collector.mjs",
+  "module": "./mjs/checksum-collector.mjs",
+  "types": "./dts/checksum-collector.d.ts",
   "files": [
-    "bin/",
-    "lib/",
-    "module/",
-    "src/"
+    "cjs/**/*.{cjs,map}",
+    "dts/**/*.d.ts",
+    "esm/**/*.{js,map}",
+    "mjs/**/*.{mjs,map}",
+    "src/**/*.{ts,tsx,json}"
   ],
   "scripts": {
-    "test": "mocha \"test/**/*.ts\"",
+    "test": "mocha",
     "updateSnapshot": "UPDATE_SNAPSHOT=1 npm test",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
-    "build": "tsc -p . && tsc -p ./tsconfig.module.json",
-    "watch": "tsc -p . --watch",
-    "clean": "rimraf lib/ module/",
+    "build": "packemon build --declaration standard",
+    "watch": "packemon watch",
+    "clean": "packemon clean",
     "prepublishOnly": "npm run clean && npm run build"
   },
   "prettier": {
@@ -46,25 +43,36 @@
     "tabWidth": 4,
     "trailingComma": "none"
   },
+  "dependencies": {
+    "mvdan-sh": "^0.5.0",
+    "structured-source": "^3.0.2"
+  },
   "devDependencies": {
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.9.1",
     "@types/structured-source": "^3.0.0",
     "mocha": "^9.1.1",
+    "packemon": "^1.5.0",
     "prettier": "^2.4.0",
     "rimraf": "^3.0.2",
     "ts-node": "^10.2.1",
-    "ts-node-test-register": "^10.0.0",
     "typescript": "^4.4.3"
   },
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
-    "@types/minimist": "^1.2.2",
-    "minimist": "^1.2.5",
-    "mvdan-sh": "^0.5.0",
-    "shlex": "^2.1.0",
-    "structured-source": "^3.0.2"
-  }
+  "packemon": {
+    "format": [
+      "mjs",
+      "esm"
+    ],
+    "inputs": {
+      "index": "src/checksum-collector.ts"
+    },
+    "platform": [
+      "node",
+      "browser"
+    ]
+  },
+  "type": "module"
 }

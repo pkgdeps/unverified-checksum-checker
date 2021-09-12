@@ -2,7 +2,6 @@
 
 secretlint rule that check if checking checksum.
 
-
 ## Install
 
 Install with [npm](https://www.npmjs.com/):
