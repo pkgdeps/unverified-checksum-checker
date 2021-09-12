@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/pkgdeps/unverified-checksum-checker/compare/v1.2.1...v1.3.0) (2021-09-12)
+
+
+### Features
+
+* add line ([d067825](https://github.com/pkgdeps/unverified-checksum-checker/commit/d0678252d4d52ada14905c88faf215920b7dcb49))
+
+
+
+
+
 # [1.2.0](https://github.com/pkgdeps/unverified-checksum-checker/compare/v1.1.1...v1.2.0) (2021-09-12)
 
 
