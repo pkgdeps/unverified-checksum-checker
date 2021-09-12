@@ -74,11 +74,11 @@ const memorize = <CB extends (arg: string) => unknown>(fn: CB): CB => {
 export type ExecutableCommand = {
     statement: string;
     binary: string;
-    range: readonly [number, number];
+    range: [number, number];
     checked: boolean;
     checkedCommand?: {
         binary: string;
-        range: readonly [number, number];
+        range: [number, number];
         targetToken: ShellWordToken;
     };
 };
@@ -101,7 +101,10 @@ export const collectExecutableCommands = (content: string): ExecutableCommand[] 
             if (!chmodStatement || match.index === undefined) {
                 continue;
             }
-            const range = [match.index + absoluteIndex, match.index + absoluteIndex + chmodStatement.length] as const;
+            const range = [match.index + absoluteIndex, match.index + absoluteIndex + chmodStatement.length] as [
+                number,
+                number
+            ];
             const argv = memorizedTokenize(chmodStatement);
             const isExecutable = argv.some((p) => {
                 return p.value === "+x" || p.value === "755";

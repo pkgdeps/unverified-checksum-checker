@@ -11,6 +11,15 @@ export const messages = {
             `チェックサムのチェックがされていないバイナリ(${props.binary})がみつかりました`
     }
 };
+const hasVerifiedComment = (text: string, binaryName: string) => {
+    // # {binaryName} is verified
+    const match = text.match(/#(.*?)verified/);
+    console.log(match);
+    if (match) {
+        return match[1].includes(binaryName);
+    }
+    return match;
+};
 export type Options = {
     /**
      * Define allow binary name
@@ -44,11 +53,26 @@ export const creator: SecretLintRuleCreator<Options> = {
                         if (options.allowBinaryNames?.includes(command.binary)) {
                             return;
                         }
+                        const currentLine = source.rangeToLocation(command.range);
+                        const ignoreCommentRange = source.locationToRange({
+                            start: {
+                                line: currentLine.start.line - 1,
+                                column: 0
+                            },
+                            end: {
+                                line: currentLine.end.line + 1,
+                                column: 0
+                            }
+                        });
+                        const commentText = source.content.slice(ignoreCommentRange[0], ignoreCommentRange[1] + 1);
+                        console.log(commentText, command.binary);
+                        if (hasVerifiedComment(commentText, command.binary)) {
+                            return;
+                        }
                         context.report({
                             message: t("FOUND_UNVERIFIED_BINARY", {
                                 binary: command.binary
                             }),
-                            // @ts-expect-error: range wider
                             range: command.range
                         });
                     });

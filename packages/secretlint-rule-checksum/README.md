@@ -43,11 +43,34 @@ verify-checksum-cheatsheet helps you how to verify the binary.
 
 - [pkgdeps/verify-checksum-cheatsheet: Checksum CheatSheet. You need to verify the checksum before executing the downloaded binary.](https://github.com/pkgdeps/verify-checksum-cheatsheet)
 
+## Manually Verify
+
+This rule report some false-positive, So You can verify the binary by comment.
+
+This rule ignore the error if following comment is found around `chmod`.
+
+```shell
+# {binary} is verified
+```
+
+For example, You can verify the `jq` binary by a comment.
+
+```shell
+# jq is verified
+chmod 755 jq
+```
+
+or 
+
+```shell
+chmod 755 jq # jq is verified
+```
+
 ## Options
 
 - `allowBinaryNames: string[]`
     - Allows a list of binary name
-    - For example, `["git", "jq"]`
+    - For example, `["jq"]`
 
 ## Changelog
 
