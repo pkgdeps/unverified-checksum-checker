@@ -1,8 +1,8 @@
 [
     {
         "range": [
-            462,
-            483
+            513,
+            534
         ],
         "statement": "chmod 755 jq-linux64 ",
         "binary": "jq-linux64",

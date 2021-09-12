@@ -59,23 +59,6 @@ export const tokenize = (shellText: string): ShellWordToken[] => {
     return parts;
 };
 
-function* lineSeparator(text: string) {
-    const lines = text.split("\n");
-    let currentStatements: string[] = [];
-    let currentLineNumber = 0;
-    for (const line of lines) {
-        currentStatements.push(line);
-        if (/\\\s*$/.test(line)) {
-            yield { line: line, statement: currentStatements.join("\n"), lineNumber: currentLineNumber };
-            currentLineNumber++;
-            continue;
-        }
-        yield { line: line, statement: currentStatements.join("\n"), lineNumber: currentLineNumber };
-        currentStatements = [];
-        currentLineNumber++;
-    }
-}
-
 const memorize = <CB extends (arg: string) => unknown>(fn: CB): CB => {
     const cacheMap = new Map<unknown, unknown>();
     return ((proxyArg: string) => {
@@ -104,7 +87,10 @@ export const collectExecutableCommands = (content: string): ExecutableCommand[] 
     const memorizedTokenize = memorize(tokenize);
     // collect chmod as executable commands
     const chmodList: ExecutableCommand[] = [];
-    for (const { line, lineNumber } of lineSeparator(content)) {
+    const lines = content.split("\n");
+    for (let index = 0; index < lines.length - 1; index++) {
+        const line = lines[index];
+        const lineNumber = index + 1;
         const absoluteIndex = source.positionToIndex({
             line: lineNumber,
             column: 0
@@ -132,12 +118,47 @@ export const collectExecutableCommands = (content: string): ExecutableCommand[] 
         }
     }
     // check checksum commands
-    for (const { statement, lineNumber } of lineSeparator(content)) {
-        const absoluteIndex = source.positionToIndex({
+    // Note: command → line → parse for avoiding here document parsing
+    const checksums = new RegExp(CHECKSUM_COMMANDS.join("|"), "g");
+    const matches = content.matchAll(checksums);
+    for (const match of matches) {
+        if (!match.index) {
+            continue;
+        }
+        const position = source.indexToPosition(match.index);
+        const getTokens = (
+            lineNumber: number,
+            text: string
+        ):
+            | {
+                  lineNumber: number;
+                  tokens: ShellWordToken[];
+              }
+            | undefined => {
+            try {
+                const tokens = memorizedTokenize(text);
+                return {
+                    lineNumber,
+                    tokens
+                };
+            } catch {
+                const prevLine = lineNumber - 1;
+                // reach first line
+                if (prevLine === 0) {
+                    return;
+                }
+                return getTokens(prevLine, lines[prevLine - 1] + "\n" + text);
+            }
+        };
+        const result = getTokens(position.line, lines[position.line - 1]);
+        if (!result) {
+            continue;
+        }
+        const { tokens, lineNumber } = result;
+        const absoluteLineStartIndex = source.positionToIndex({
             line: lineNumber,
             column: 0
         });
-        const tokens = memorizedTokenize(statement);
         const checksumToken = tokens.find((token) => {
             return CHECKSUM_COMMANDS.includes(token.value);
         });
@@ -148,10 +169,16 @@ export const collectExecutableCommands = (content: string): ExecutableCommand[] 
                     chmod.checked = true;
                     chmod.checkedCommand = {
                         binary: checksumToken.value,
-                        range: [checksumToken.range[0] + absoluteIndex, checksumToken.range[1] + absoluteIndex],
+                        range: [
+                            checksumToken.range[0] + absoluteLineStartIndex,
+                            checksumToken.range[1] + absoluteLineStartIndex
+                        ],
                         targetToken: {
                             ...checkedToken,
-                            range: [checkedToken.range[0] + absoluteIndex, checkedToken.range[1] + absoluteIndex]
+                            range: [
+                                checkedToken.range[0] + absoluteLineStartIndex,
+                                checkedToken.range[1] + absoluteLineStartIndex
+                            ]
                         }
                     };
                 }

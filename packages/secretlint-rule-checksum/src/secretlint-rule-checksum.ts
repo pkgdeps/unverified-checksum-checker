@@ -53,7 +53,7 @@ export const creator: SecretLintRuleCreator<Options> = {
                         });
                     });
                 } catch (error) {
-                    console.error(error);
+                    console.error("parse error", error, source);
                 }
             }
         };
