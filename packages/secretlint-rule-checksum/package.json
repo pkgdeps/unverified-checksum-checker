@@ -1,6 +1,6 @@
 {
   "name": "@pkgdeps/secretlint-rule-checksum",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "secretlint rule that check if checking checksum.",
   "keywords": [
     "secretlint",
@@ -48,7 +48,7 @@
     "trailingComma": "none"
   },
   "dependencies": {
-    "@pkgdeps/checksum-collector": "^1.0.0"
+    "@pkgdeps/checksum-collector": "^1.1.0"
   },
   "devDependencies": {
     "@secretlint/tester": "^3.3.0",
