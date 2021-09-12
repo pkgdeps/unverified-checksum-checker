@@ -1,5 +1,5 @@
 import assert from "assert";
-import { tokenize } from "../src/checksum-collector";
+import { tokenize } from "../src/checksum-collector.js";
 
 describe("tokenize", function () {
     it("should return tokens", () => {
