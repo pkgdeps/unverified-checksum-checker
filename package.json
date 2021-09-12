@@ -33,6 +33,7 @@
     "release": "lerna publish from-package",
     "release:canary": "lerna publish --canary",
     "test": "lerna run test",
+    "updateSnapshot": "lerna run updateSnapshot",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
     "prepare": "git config --local core.hooksPath .githooks"
   },
