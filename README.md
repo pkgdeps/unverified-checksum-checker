@@ -1,16 +1,21 @@
 # @pkgdeps/unverified-checksum-checker
 
-secretlint rule checks if checking checksum in shellscript.
+Found unverified executable binary on your shellscript.
 
-## Install
+This tools help you to implement checksum check logics. 
 
-Install with [npm](https://www.npmjs.com/):
+## Features
 
-    npm install @pkgdeps/unverified-checksum-checker
+- [secretlint](https://github.com/secretlint/secretlint) integration: [secretlint-rule-checksum](./packages/secretlint-rule-checksum)
+- Node.js module: [checksum-collector](./packages/checksum-collector)
 
 ## Usage
 
-- [ ] Write usage instructions
+### Using CLI
+
+- [ ]
+
+### Using Secretlint
 
 ## Changelog
 
