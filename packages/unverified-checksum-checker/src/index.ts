@@ -8,7 +8,7 @@ export const verify = async (globList: string[]) => {
         const content = await fs.readFile(filePath, "utf-8");
         const commands = collectExecutableCommands(content);
         commands
-            .filter((command) => command.checked)
+            .filter((command) => !command.checked)
             .forEach((command) => {
                 checkResults.push(`${filePath}: ${command} is not verified`);
             });
