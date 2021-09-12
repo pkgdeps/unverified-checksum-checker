@@ -1,8 +1,44 @@
 [
     {
         "range": [
-            1508,
-            1535
+            465,
+            494
+        ],
+        "statement": "chmod +x ${BIN_DIR}/kustomize",
+        "binary": "kustomize",
+        "checked": false
+    },
+    {
+        "range": [
+            545,
+            572
+        ],
+        "statement": "chmod +x ${BIN_DIR}/kubectl",
+        "binary": "kubectl",
+        "checked": false
+    },
+    {
+        "range": [
+            943,
+            971
+        ],
+        "statement": "chmod +x ${BIN_DIR}/conftest",
+        "binary": "conftest",
+        "checked": false
+    },
+    {
+        "range": [
+            1201,
+            1233
+        ],
+        "statement": "chmod 755 /usr/local/bin/kubectl",
+        "binary": "kubectl",
+        "checked": false
+    },
+    {
+        "range": [
+            1271,
+            1298
         ],
         "statement": "chmod +x /usr/local/bin/jq ",
         "binary": "jq",

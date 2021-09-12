@@ -61,16 +61,17 @@ export const tokenize = (shellText: string): ShellWordToken[] => {
 
 function* lineSeparator(text: string) {
     const lines = text.split("\n");
-    let currentLineTexts: string[] = [];
+    let currentStatements: string[] = [];
     let currentLineNumber = 0;
     for (const line of lines) {
-        currentLineTexts.push(line);
+        currentStatements.push(line);
         if (/\\\s*$/.test(line)) {
+            yield { line: line, statement: currentStatements.join("\n"), lineNumber: currentLineNumber };
             currentLineNumber++;
             continue;
         }
-        yield { line: currentLineTexts.join("\n") + "\n", lineNumber: currentLineNumber };
-        currentLineTexts = [];
+        yield { line: line, statement: currentStatements.join("\n"), lineNumber: currentLineNumber };
+        currentStatements = [];
         currentLineNumber++;
     }
 }
@@ -131,12 +132,12 @@ export const collectExecutableCommands = (content: string): ExecutableCommand[] 
         }
     }
     // check checksum commands
-    for (const { line, lineNumber } of lineSeparator(content)) {
+    for (const { statement, lineNumber } of lineSeparator(content)) {
         const absoluteIndex = source.positionToIndex({
             line: lineNumber,
             column: 0
         });
-        const tokens = memorizedTokenize(line);
+        const tokens = memorizedTokenize(statement);
         const checksumToken = tokens.find((token) => {
             return CHECKSUM_COMMANDS.includes(token.value);
         });
