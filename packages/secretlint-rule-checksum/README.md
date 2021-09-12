@@ -43,7 +43,7 @@ verify-checksum-cheatsheet helps you how to verify the binary.
 
 - [pkgdeps/verify-checksum-cheatsheet: Checksum CheatSheet. You need to verify the checksum before executing the downloaded binary.](https://github.com/pkgdeps/verify-checksum-cheatsheet)
 
-## Manually Verify
+## Manual Verify
 
 This rule report some false-positive, So You can verify the binary by comment.
 
