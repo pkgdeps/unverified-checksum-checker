@@ -1,4 +1,4 @@
-# @secretlint/checksum-collector
+# @pkgdeps/checksum-collector
 
 Collection checking checksum operations in shellscript.
 
@@ -6,7 +6,7 @@ Collection checking checksum operations in shellscript.
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install @secretlint/checksum-collector
+    npm install @pkgdeps/checksum-collector
 
 ## Usage
 

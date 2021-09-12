@@ -7,7 +7,7 @@ secretlint rule that check if checking checksum.
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install @secretlint/secretlint-rule-github
+    npm install @pkgdeps/secretlint-rule-github
 
 ## Usage
 
