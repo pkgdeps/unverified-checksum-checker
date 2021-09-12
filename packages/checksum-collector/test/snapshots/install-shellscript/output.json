@@ -1,0 +1,11 @@
+[
+    {
+        "range": [
+            1508,
+            1535
+        ],
+        "statement": "chmod +x /usr/local/bin/jq ",
+        "binary": "jq",
+        "checked": false
+    }
+]

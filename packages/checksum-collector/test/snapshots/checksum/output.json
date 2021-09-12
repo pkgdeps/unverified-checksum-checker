@@ -1,0 +1,25 @@
+[
+    {
+        "range": [
+            462,
+            483
+        ],
+        "statement": "chmod 755 jq-linux64 ",
+        "binary": "jq-linux64",
+        "checked": true,
+        "checkedCommand": {
+            "binary": "shasum",
+            "range": [
+                395,
+                401
+            ],
+            "targetToken": {
+                "value": "\"jq-linux64$\"",
+                "range": [
+                    364,
+                    377
+                ]
+            }
+        }
+    }
+]

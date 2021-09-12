@@ -1,0 +1,58 @@
+{
+  "private": true,
+  "name": "@secretlint/secretlint-rule-shellscript-checksum",
+  "version": "1.0.0",
+  "description": "secretlint rule checks if checking checksum in shellscript.",
+  "keywords": [
+    "secretlint",
+    "secreltint-rule"
+  ],
+  "homepage": "https://github.com/secretlint/secretlint-rule-shellscript-checksum",
+  "bugs": {
+    "url": "https://github.com/secretlint/secretlint-rule-shellscript-checksum/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/secretlint/secretlint-rule-shellscript-checksum.git"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "license": "MIT",
+  "author": "azu",
+  "scripts": {
+    "build": "lerna run build",
+    "clean": "lerna run clean",
+    "prepublish": "npm run clean && npm run build",
+    "versionup": "lerna version --conventional-commits",
+    "versionup:patch": "lerna version patch --conventional-commits",
+    "versionup:minor": "lerna version minor --conventional-commits",
+    "versionup:major": "lerna version major --conventional-commits",
+    "release": "lerna publish from-package",
+    "release:canary": "lerna publish --canary",
+    "test": "lerna run test",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
+    "prepare": "git config --local core.hooksPath .githooks"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.4.0"
+  },
+  "prettier": {
+    "singleQuote": false,
+    "printWidth": 120,
+    "tabWidth": 4,
+    "trailingComma": "none"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css}": [
+      "prettier --write"
+    ]
+  }
+}
