@@ -1,0 +1,78 @@
+{
+  "name": "@pkgdeps/unverified-checksum-checker",
+  "version": "1.0.0",
+  "description": "A command line tool that check if checking checksum in shellscript.",
+  "keywords": [
+    "checksum",
+    "verify",
+    "cli",
+    "security"
+  ],
+  "homepage": "https://github.com/pkgdeps/unverified-checksum-checker/tree/master/packages/unverified-checksum-checker/",
+  "bugs": {
+    "url": "https://github.com/pkgdeps/unverified-checksum-checker/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pkgdeps/unverified-checksum-checker.git"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "sideEffects": false,
+  "main": "./mjs/index.mjs",
+  "module": "./mjs/index.mjs",
+  "types": "./dts/index.d.ts",
+  "bin": "./mjs/bin.mjs",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "dts/**/*.d.ts",
+    "mjs/**/*.{mjs,map}",
+    "src/**/*.{ts,tsx,json}"
+  ],
+  "scripts": {
+    "test": "mocha",
+    "updateSnapshot": "UPDATE_SNAPSHOT=1 npm test",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
+    "build": "packemon build --declaration standard",
+    "watch": "packemon watch",
+    "clean": "packemon clean",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": false,
+    "tabWidth": 4,
+    "trailingComma": "none"
+  },
+  "dependencies": {
+    "@pkgdeps/checksum-collector": "^1.1.1",
+    "globby": "^12.0.2",
+    "meow": "^10.1.1"
+  },
+  "devDependencies": {
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.9.1",
+    "mocha": "^9.1.1",
+    "packemon": "^1.5.0",
+    "prettier": "^2.4.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.2.1",
+    "ts-node-test-register": "^10.0.0",
+    "typescript": "^4.4.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packemon": {
+    "format": "mjs",
+    "platform": "node",
+    "inputs": {
+      "index": "src/index.ts",
+      "bin": "src/bin.ts"
+    }
+  },
+  "type": "module"
+}
