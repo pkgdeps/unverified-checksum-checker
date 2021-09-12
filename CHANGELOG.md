@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/pkgdeps/unverified-checksum-checker/compare/v1.1.1...v1.2.0) (2021-09-12)
+
+
+### Features
+
+* @pkgdeps/unverified-checksum-checker ([375957e](https://github.com/pkgdeps/unverified-checksum-checker/commit/375957ef108749b09a6d11eb682a977acc5bb04e))
+* support verified comment ([0038b68](https://github.com/pkgdeps/unverified-checksum-checker/commit/0038b68ee81775b76fc5e774d6b284aea9bb2891))
+* support verified comment ([5b7f283](https://github.com/pkgdeps/unverified-checksum-checker/commit/5b7f283553d0a8162360cb6f25c39cb8bfab0fe8))
+
+
+
+
+
 ## [1.1.1](https://github.com/pkgdeps/unverified-checksum-checker/compare/v1.1.0...v1.1.1) (2021-09-12)
 
 

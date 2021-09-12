@@ -1,6 +1,6 @@
 {
   "name": "@pkgdeps/unverified-checksum-checker",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "A command line tool that check if checking checksum in shellscript.",
   "keywords": [
     "checksum",
@@ -48,7 +48,7 @@
     "trailingComma": "none"
   },
   "dependencies": {
-    "@pkgdeps/checksum-collector": "^1.1.1",
+    "@pkgdeps/checksum-collector": "^1.2.0",
     "globby": "^12.0.2",
     "meow": "^10.1.1"
   },
