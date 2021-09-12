@@ -10,7 +10,9 @@ export const verify = async (globList: string[]) => {
         commands
             .filter((command) => !command.checked)
             .forEach((command) => {
-                checkResults.push(`${filePath}: ${command} is not verified`);
+                checkResults.push(
+                    `${filePath}:${command.location.start.line}:${command.location.start.column}: ${command.binary} is not verified`
+                );
             });
     }
     return checkResults;

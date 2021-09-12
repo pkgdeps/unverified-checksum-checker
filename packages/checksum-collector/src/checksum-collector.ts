@@ -75,10 +75,18 @@ export type ExecutableCommand = {
     statement: string;
     binary: string;
     range: [number, number];
+    location: {
+        start: { line: number; column: number };
+        end: { line: number; column: number };
+    };
     checked: boolean;
     checkedCommand?: {
         binary: string;
         range: [number, number];
+        location: {
+            start: { line: number; column: number };
+            end: { line: number; column: number };
+        };
         targetToken: ShellWordToken;
     };
 };
@@ -113,6 +121,7 @@ export const collectExecutableCommands = (content: string): ExecutableCommand[] 
                 const binaryName = path.basename(argv[argv.length - 1].value);
                 chmodList.push({
                     range,
+                    location: source.rangeToLocation(range),
                     statement: chmodStatement,
                     binary: binaryName,
                     checked: false
@@ -170,18 +179,21 @@ export const collectExecutableCommands = (content: string): ExecutableCommand[] 
                 const checkedToken = tokens.find((token) => token.value.includes(chmod.binary));
                 if (checkedToken) {
                     chmod.checked = true;
+                    const targetTokenRange = [
+                        checkedToken.range[0] + absoluteLineStartIndex,
+                        checkedToken.range[1] + absoluteLineStartIndex
+                    ] as [number, number];
+                    const commandRange = [
+                        checksumToken.range[0] + absoluteLineStartIndex,
+                        checksumToken.range[1] + absoluteLineStartIndex
+                    ] as [number, number];
                     chmod.checkedCommand = {
                         binary: checksumToken.value,
-                        range: [
-                            checksumToken.range[0] + absoluteLineStartIndex,
-                            checksumToken.range[1] + absoluteLineStartIndex
-                        ],
+                        range: commandRange,
+                        location: source.rangeToLocation(commandRange),
                         targetToken: {
                             ...checkedToken,
-                            range: [
-                                checkedToken.range[0] + absoluteLineStartIndex,
-                                checkedToken.range[1] + absoluteLineStartIndex
-                            ]
+                            range: targetTokenRange
                         }
                     };
                 }
