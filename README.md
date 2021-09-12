@@ -1,4 +1,4 @@
-n # @pkgdeps/unverified-checksum-checker
+# @pkgdeps/unverified-checksum-checker
 
 secretlint rule checks if checking checksum in shellscript.
 
