@@ -26,6 +26,7 @@ $ npx @pkgdeps/unverified-checksum-checker "script/**/*.sh"
 ```
 
 [@pkgdeps/unverified-checksum-checker](https://www.npmjs.com/package/@pkgdeps/unverified-checksum-checker) is a simple CLI.
+
 If you want to get flexible configuration, please use [secretlint](https://github.com/secretlint/secretlint) integration.
 
 ### Using Secretlint
@@ -55,6 +56,12 @@ Next configuration enable `@pkgdeps/secretlint-rule-checksum` in secretlint.
 ```
 
 For more details, see [secretlint-rule-checksum's README](./packages/secretlint-rule-checksum) and [secretlint](https://github.com/secretlint/secretlint) page.
+
+### Using Node.js modules
+
+[@pkgdeps/checksum-collector](./packages/checksum-collector) is core modules for this checker.
+
+If you want to customize it, please see [@pkgdeps/checksum-collector](./packages/checksum-collector).
 
 ## Changelog
 
