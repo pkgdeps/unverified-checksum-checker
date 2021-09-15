@@ -6,7 +6,7 @@ This tool help you to implement checksum check logics.
 
 ## Features
 
-- Simple checker CLI: [@pkgdeps/unverified-checksum-checker](https://www.npmjs.com/package/@pkgdeps/unverified-checksum-checker)
+- Simple checker CLI: [@pkgdeps/unverified-checksum-checker](./packages/unverified-checksum-checker)
 - [secretlint](https://github.com/secretlint/secretlint) integration: [secretlint-rule-checksum](./packages/secretlint-rule-checksum)
 - Node.js module: [checksum-collector](./packages/checksum-collector)
 
