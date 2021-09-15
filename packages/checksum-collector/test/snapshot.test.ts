@@ -25,7 +25,7 @@ describe("Snapshot testing", () => {
             }
             // compare input and output
             const expectedContent = JSON.parse(fs.readFileSync(expectedFilePath, "utf-8"));
-            assert.deepStrictEqual(actual, expectedContent);
+            assert.deepStrictEqual(JSON.parse(JSON.stringify(actual)), expectedContent);
         });
     });
 });
