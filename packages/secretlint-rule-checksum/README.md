@@ -1,12 +1,14 @@
 # @pkgdeps/secretlint-rule-checksum
 
-secretlint rule that check if checking checksum.
+[secretlint](https://github.com/secretlint/secretlint) rule that check if checking checksum.
 
 ## Install
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install @pkgdeps/secretlint-rule-github
+    npm install @pkgdeps/secretlint-rule-checksum
+
+Requirements: [secretlint](https://github.com/secretlint/secretlint) v4+
 
 ## Usage
 
