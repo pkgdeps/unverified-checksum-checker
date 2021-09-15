@@ -2,6 +2,12 @@
 
 Collection checking checksum operations in shellscript.
 
+## Overview
+
+1. Collect `chmod +x {binary}`
+2. The `{binary}` is verified with checksum checker like `shasum` or `md5sum` etc..
+3. Return the collected results
+
 ## Install
 
 Install with [npm](https://www.npmjs.com/):
