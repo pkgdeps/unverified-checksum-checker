@@ -4,6 +4,16 @@
             513,
             534
         ],
+        "location": {
+            "start": {
+                "line": 12,
+                "column": 0
+            },
+            "end": {
+                "line": 12,
+                "column": 21
+            }
+        },
         "statement": "chmod 755 jq-linux64 ",
         "binary": "jq-linux64",
         "checked": true,
@@ -13,6 +23,16 @@
                 395,
                 401
             ],
+            "location": {
+                "start": {
+                    "line": 10,
+                    "column": 2
+                },
+                "end": {
+                    "line": 10,
+                    "column": 8
+                }
+            },
             "targetToken": {
                 "value": "\"jq-linux64$\"",
                 "range": [

@@ -33,7 +33,7 @@
     "src/**/*.{ts,tsx,json}"
   ],
   "scripts": {
-    "test": "mocha",
+    "test": "npm run build",
     "updateSnapshot": "UPDATE_SNAPSHOT=1 npm test",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
     "build": "packemon build --declaration standard",

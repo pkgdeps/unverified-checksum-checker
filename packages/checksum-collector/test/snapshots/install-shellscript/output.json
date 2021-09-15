@@ -4,6 +4,16 @@
             496,
             525
         ],
+        "location": {
+            "start": {
+                "line": 16,
+                "column": 0
+            },
+            "end": {
+                "line": 16,
+                "column": 29
+            }
+        },
         "statement": "chmod +x ${BIN_DIR}/kustomize",
         "binary": "kustomize",
         "checked": false
@@ -13,6 +23,16 @@
             678,
             705
         ],
+        "location": {
+            "start": {
+                "line": 20,
+                "column": 0
+            },
+            "end": {
+                "line": 20,
+                "column": 27
+            }
+        },
         "statement": "chmod +x ${BIN_DIR}/kubectl",
         "binary": "kubectl",
         "checked": false
@@ -22,6 +42,16 @@
             973,
             1001
         ],
+        "location": {
+            "start": {
+                "line": 26,
+                "column": 0
+            },
+            "end": {
+                "line": 26,
+                "column": 28
+            }
+        },
         "statement": "chmod +x ${BIN_DIR}/conftest",
         "binary": "conftest",
         "checked": false
@@ -31,6 +61,16 @@
             1202,
             1234
         ],
+        "location": {
+            "start": {
+                "line": 28,
+                "column": 199
+            },
+            "end": {
+                "line": 28,
+                "column": 231
+            }
+        },
         "statement": "chmod 755 /usr/local/bin/kubectl",
         "binary": "kubectl",
         "checked": false
@@ -40,6 +80,16 @@
             1372,
             1399
         ],
+        "location": {
+            "start": {
+                "line": 32,
+                "column": 0
+            },
+            "end": {
+                "line": 32,
+                "column": 27
+            }
+        },
         "statement": "chmod +x /usr/local/bin/jq ",
         "binary": "jq",
         "checked": false
