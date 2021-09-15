@@ -1,11 +1,12 @@
 # @pkgdeps/unverified-checksum-checker
 
-Found unverified executable binary on your shellscript.
+Found unverified executable binary on your shell-script.
 
 This tool help you to implement checksum check logics. 
 
 ## Features
 
+- Simple checker tool
 - [secretlint](https://github.com/secretlint/secretlint) integration: [secretlint-rule-checksum](./packages/secretlint-rule-checksum)
 - Node.js module: [checksum-collector](./packages/checksum-collector)
 
