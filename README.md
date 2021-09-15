@@ -33,6 +33,13 @@ If you want to get flexible configuration, please use [secretlint](https://githu
 [@pkgdeps/secretlint-rule-checksum](https://www.npmjs.com/package/@pkgdeps/secretlint-rule-checksum) is a secretlint rule.
 It integrates with [secretlint](https://github.com/secretlint/secretlint) and provide flexible configuration.
 
+Install secretlint and the rule.
+
+```
+npm install secretlint @pkgdeps/secretlint-rule-checksum --save-dev
+npx secretlint --init
+```
+
 Next configuration enable `@pkgdeps/secretlint-rule-checksum` in secretlint.
 
 `.secretlintrc.json`:
