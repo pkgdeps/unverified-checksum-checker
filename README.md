@@ -55,10 +55,10 @@ See [Releases page](https://github.com/pkgdeps/unverified-checksum-checker/relea
 
 ## Running tests
 
-Install devDependencies and Run `npm test`:
+Install devDependencies and Run `yarn test`:
 
     yarn install
-    npm test
+    yarn test
 
 ## Contributing
 
