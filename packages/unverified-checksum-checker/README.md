@@ -6,11 +6,17 @@ A command line tool that check if checking checksum in shellscript.
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install @pkgdeps/unverified-checksum-checker
+    npm install @pkgdeps/unverified-checksum-checker --global
 
 ## Usage
 
-- [ ] Write usage instructions
+    Usage
+      $ npx @pkgdeps/unverified-checksum-checker [file|glob]
+ 
+    Options
+
+    Examples
+      $ npx @pkgdeps/unverified-checksum-checker "script/**/*.sh"
 
 ## Changelog
 

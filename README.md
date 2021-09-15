@@ -13,9 +13,41 @@ This tool help you to implement checksum check logics.
 
 ### Using CLI
 
-- [ ]
+[@pkgdeps/unverified-checksum-checker](https://www.npmjs.com/package/@pkgdeps/unverified-checksum-checker) is a command line tool.
+
+```sh
+$ npx @pkgdeps/unverified-checksum-checker [file|glob]
+```
+
+For example, You can check "script/**/*.sh" files via next command.
+
+```
+$ npx @pkgdeps/unverified-checksum-checker "script/**/*.sh"
+```
+
+[@pkgdeps/unverified-checksum-checker](https://www.npmjs.com/package/@pkgdeps/unverified-checksum-checker) is a simple CLI.
+If you want to get flexible configuration, please use [secretlint](https://github.com/secretlint/secretlint) integration.
 
 ### Using Secretlint
+
+[@pkgdeps/secretlint-rule-checksum](https://www.npmjs.com/package/@pkgdeps/secretlint-rule-checksum) is a secretlint rule.
+It integrates with [secretlint](https://github.com/secretlint/secretlint) and provide flexible configuration.
+
+Next configuration enable `@pkgdeps/secretlint-rule-checksum` in secretlint.
+
+`.secretlintrc.json`:
+
+```json
+{
+    "rules": [
+        {
+            "id": "@pkgdeps/secretlint-rule-checksum"
+        }
+    ]
+}
+```
+
+For more details, see [secretlint-rule-checksum's README](./packages/secretlint-rule-checksum) and [secretlint](https://github.com/secretlint/secretlint) page.
 
 ## Changelog
 
@@ -25,6 +57,7 @@ See [Releases page](https://github.com/pkgdeps/unverified-checksum-checker/relea
 
 Install devDependencies and Run `npm test`:
 
+    yarn install
     npm test
 
 ## Contributing
