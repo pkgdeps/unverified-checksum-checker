@@ -5,6 +5,7 @@ import StructuredSource from "structured-source";
 
 export const CHECKSUM_COMMANDS = [
     "cksum",
+    "cksum",
     "shasum",
     "md5sum",
     "sha1sum",
@@ -118,7 +119,9 @@ export const collectExecutableCommands = (content: string): ExecutableCommand[] 
                 return p.value === "+x" || p.value === "755";
             });
             if (isExecutable) {
-                const binaryName = path.basename(argv[argv.length - 1].value);
+                // strip " and '
+                // e.g. chmod +x "${BIN_DIR}/kustomize" → kustomize
+                const binaryName = path.basename(argv[argv.length - 1].value.replace(/["']/g, ""));
                 chmodList.push({
                     range,
                     location: source.rangeToLocation(range),

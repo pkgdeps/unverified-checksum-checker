@@ -1,0 +1,131 @@
+[
+    {
+        "range": [
+            926,
+            957
+        ],
+        "location": {
+            "start": {
+                "line": 20,
+                "column": 0
+            },
+            "end": {
+                "line": 20,
+                "column": 31
+            }
+        },
+        "statement": "chmod +x \"${BIN_DIR}/kustomize\"",
+        "binary": "kustomize",
+        "checked": true,
+        "checkedCommand": {
+            "binary": "shasum",
+            "range": [
+                1846,
+                1852
+            ],
+            "location": {
+                "start": {
+                    "line": 34,
+                    "column": 86
+                },
+                "end": {
+                    "line": 34,
+                    "column": 92
+                }
+            },
+            "targetToken": {
+                "value": "\"Error: Not match kustomize checksum.\"",
+                "range": [
+                    1872,
+                    1910
+                ]
+            }
+        }
+    },
+    {
+        "range": [
+            1369,
+            1396
+        ],
+        "location": {
+            "start": {
+                "line": 28,
+                "column": 0
+            },
+            "end": {
+                "line": 28,
+                "column": 27
+            }
+        },
+        "statement": "chmod +x ${BIN_DIR}/kubectl",
+        "binary": "kubectl",
+        "checked": true,
+        "checkedCommand": {
+            "binary": "sha256sum",
+            "range": [
+                1320,
+                1329
+            ],
+            "location": {
+                "start": {
+                    "line": 26,
+                    "column": 58
+                },
+                "end": {
+                    "line": 26,
+                    "column": 67
+                }
+            },
+            "targetToken": {
+                "value": "\"$(<${BIN_DIR}/kubectl.sha256) ${BIN_DIR}/kubectl\"",
+                "range": [
+                    1267,
+                    1317
+                ]
+            }
+        }
+    },
+    {
+        "range": [
+            2075,
+            2103
+        ],
+        "location": {
+            "start": {
+                "line": 37,
+                "column": 0
+            },
+            "end": {
+                "line": 37,
+                "column": 28
+            }
+        },
+        "statement": "chmod +x ${BIN_DIR}/conftest",
+        "binary": "conftest",
+        "checked": true,
+        "checkedCommand": {
+            "binary": "shasum",
+            "range": [
+                1846,
+                1852
+            ],
+            "location": {
+                "start": {
+                    "line": 34,
+                    "column": 86
+                },
+                "end": {
+                    "line": 34,
+                    "column": 92
+                }
+            },
+            "targetToken": {
+                "value": "\"conftest_${CONFTEST_VERSION}_Darwin_x86_64.tar.gz$\"",
+                "range": [
+                    1768,
+                    1820
+                ]
+            }
+        }
+    }
+]
