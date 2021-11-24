@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/pkgdeps/unverified-checksum-checker/compare/v1.3.0...v1.3.1) (2021-11-24)
+
+
+### Bug Fixes
+
+* **checksum-collector:** strip ' and " from binary name ([ab4ba30](https://github.com/pkgdeps/unverified-checksum-checker/commit/ab4ba30a1c0b4068293cf9e69075e6f13d6f8b66))
+
+
+
+
+
 # [1.3.0](https://github.com/pkgdeps/unverified-checksum-checker/compare/v1.2.1...v1.3.0) (2021-09-12)
 
 
