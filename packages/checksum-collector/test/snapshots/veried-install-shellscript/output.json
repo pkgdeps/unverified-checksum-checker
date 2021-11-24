@@ -1,8 +1,8 @@
 [
     {
         "range": [
-            926,
-            957
+            923,
+            954
         ],
         "location": {
             "start": {
@@ -20,8 +20,8 @@
         "checkedCommand": {
             "binary": "shasum",
             "range": [
-                1846,
-                1852
+                1843,
+                1849
             ],
             "location": {
                 "start": {
@@ -36,16 +36,16 @@
             "targetToken": {
                 "value": "\"Error: Not match kustomize checksum.\"",
                 "range": [
-                    1872,
-                    1910
+                    1869,
+                    1907
                 ]
             }
         }
     },
     {
         "range": [
-            1369,
-            1396
+            1366,
+            1393
         ],
         "location": {
             "start": {
@@ -63,8 +63,8 @@
         "checkedCommand": {
             "binary": "sha256sum",
             "range": [
-                1320,
-                1329
+                1317,
+                1326
             ],
             "location": {
                 "start": {
@@ -79,16 +79,16 @@
             "targetToken": {
                 "value": "\"$(<${BIN_DIR}/kubectl.sha256) ${BIN_DIR}/kubectl\"",
                 "range": [
-                    1267,
-                    1317
+                    1264,
+                    1314
                 ]
             }
         }
     },
     {
         "range": [
-            2075,
-            2103
+            2072,
+            2100
         ],
         "location": {
             "start": {
@@ -106,8 +106,8 @@
         "checkedCommand": {
             "binary": "shasum",
             "range": [
-                1846,
-                1852
+                1843,
+                1849
             ],
             "location": {
                 "start": {
@@ -122,8 +122,8 @@
             "targetToken": {
                 "value": "\"conftest_${CONFTEST_VERSION}_Darwin_x86_64.tar.gz$\"",
                 "range": [
-                    1768,
-                    1820
+                    1765,
+                    1817
                 ]
             }
         }
