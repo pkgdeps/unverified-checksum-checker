@@ -49,14 +49,14 @@
   },
   "devDependencies": {
     "@types/mocha": "^9.0.0",
-    "@types/node": "^16.9.1",
+    "@types/node": "^16.11.10",
     "@types/structured-source": "^3.0.0",
-    "mocha": "^9.1.1",
-    "packemon": "^1.5.0",
-    "prettier": "^2.4.0",
+    "mocha": "^9.1.3",
+    "packemon": "^1.8.0",
+    "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
-    "ts-node": "^10.2.1",
-    "typescript": "^4.4.3"
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
   },
   "publishConfig": {
     "access": "public"
